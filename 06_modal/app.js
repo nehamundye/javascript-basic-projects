@@ -3,9 +3,9 @@
 // when user clicks modal-btn add .open-modal to modal-overlay
 // when user clicks close-btn remove .open-modal from modal-overlay
 
-modalDiv = document.querySelector('.modal-overlay')
-openModalBtn = document.querySelector('.modal-btn')
-closeModalBtn = document.querySelector('.close-btn')
+const modalDiv = document.querySelector('.modal-overlay')
+const openModalBtn = document.querySelector('.modal-btn')
+const closeModalBtn = document.querySelector('.close-btn')
 
 openModalBtn.addEventListener('click', function() {
     // console.log(openModalBtn.classList.vale);
