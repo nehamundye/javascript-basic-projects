@@ -71,6 +71,14 @@ const menu = [
     img: "./images/item-9.jpeg",
     desc: `skateboard fam synth authentic semiotics. Live-edge lyft af, edison bulb yuccie crucifix microdosing.`,
   },
+  {
+    id: 10,
+    title: "quarantine buddy",
+    category: "dinner",
+    price: 70.99,
+    img: "./images/item-9.jpeg",
+    desc: `skateboard fam synth authentic semiotics. Live-edge lyft af, edison bulb yuccie crucifix microdosing.`,
+  }
 ];
 
 const sectionCenter = document.querySelector('.section-center');
@@ -78,6 +86,25 @@ const sectionCenter = document.querySelector('.section-center');
 window.addEventListener('DOMContentLoaded', function() {
   displayMenuItems(menu);
 })
+
+
+categoryList = menu.map(i => i.category)
+let uniquecategoryList = ['all']
+categoryList.forEach(i => {
+  if (!uniquecategoryList.includes(i)) {
+    uniquecategoryList.push(i);
+  }
+
+  // console.log(uniquecategoryList);
+})
+
+uniquecategoryList.forEach(i => {
+  const categoryButton = document.createElement('button');
+  categoryButton.className = 'filter-btn';
+  categoryButton.innerHTML = `${i}`
+  document.querySelector('.btn-container').append(categoryButton);
+});
+
 
 function displayMenuItems(menuItems) {
   // console.log(menu[0]['title'])
@@ -107,14 +134,14 @@ activebtn.forEach(button => {
     // console.log(button.innerHTML)
     if (button.innerHTML === 'All') {
       displayMenuItems(menu)
-    } else if (button.innerHTML === 'Breakfast') {
-      const breakfastmenu = menu.filter(i => (i.category === button.innerHTML.toLocaleLowerCase()))
+    } else if (button.innerHTML.toLowerCase() === 'breakfast') {
+      const breakfastmenu = menu.filter(i => (i.category === button.innerHTML.toLowerCase()))
       displayMenuItems(breakfastmenu)
-    } else if (button.innerHTML === 'Lunch') {
-      const lunchmenu = menu.filter(i => (i.category === button.innerHTML.toLocaleLowerCase()))
+    } else if (button.innerHTML.toLowerCase() === 'lunch') {
+      const lunchmenu = menu.filter(i => (i.category === button.innerHTML.toLowerCase()))
       displayMenuItems(lunchmenu)
-    } else if (button.innerHTML === 'Shakes') {
-      const shakesmenu = menu.filter(i => (i.category === button.innerHTML.toLocaleLowerCase()))
+    } else if (button.innerHTML.toLowerCase() === 'shakes') {
+      const shakesmenu = menu.filter(i => (i.category === button.innerHTML.toLowerCase()))
       displayMenuItems(shakesmenu)
     } else {
       displayMenuItems(menu)
