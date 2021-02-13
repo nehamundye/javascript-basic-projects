@@ -8,7 +8,7 @@ const openModalBtn = document.querySelector('.modal-btn')
 const closeModalBtn = document.querySelector('.close-btn')
 
 openModalBtn.addEventListener('click', function() {
-    // console.log(openModalBtn.classList.vale);
+    // console.log(openModalBtn.classList.value);
     modalDiv.classList.add('open-modal')
 });
 
