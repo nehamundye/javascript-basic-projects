@@ -74,3 +74,21 @@ header::after {
   background: rgba(0, 0, 0, 0.7);
   z-index: -1;
 }
+
+.preloader {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    background: white;
+    z-index: 999;
+}
+
+.hide-preloader {
+    visibility: hidden;
+}

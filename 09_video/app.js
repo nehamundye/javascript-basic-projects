@@ -14,3 +14,10 @@ togglefillClick.addEventListener("click", () => {
     video.pause();
   }
 });
+
+// preloader
+const preloader = document.querySelector('.preloader')
+
+window.addEventListener('load', () => {
+    preloader.classList.add("hide-preloader")
+})
