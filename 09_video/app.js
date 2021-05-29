@@ -16,8 +16,8 @@ togglefillClick.addEventListener("click", () => {
 });
 
 // preloader
-const preloader = document.querySelector('.preloader')
+const preloader = document.querySelector(".preloader");
 
-window.addEventListener('load', () => {
-    preloader.classList.add("hide-preloader")
-})
+window.addEventListener("load", () => {
+  preloader.classList.add("hide-preloader");
+});
